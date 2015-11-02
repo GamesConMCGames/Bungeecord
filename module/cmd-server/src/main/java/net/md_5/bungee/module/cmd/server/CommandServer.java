@@ -25,7 +25,7 @@ public class CommandServer extends Command implements TabExecutor
 
     public CommandServer()
     {
-        super( "server", "bungeecord.command.server" );
+        super( "s", "command.server" );
     }
 
     @Override
@@ -53,7 +53,7 @@ public class CommandServer extends Command implements TabExecutor
                             new ComponentBuilder( count + ( count == 1 ? " player" : " players" ) + "\n" )
                             .append( "Click to connect to the server" ).italic( true )
                             .create() ) );
-                    serverTextComponent.setClickEvent( new ClickEvent( ClickEvent.Action.RUN_COMMAND, "/server " + server.getName() ) );
+                    serverTextComponent.setClickEvent( new ClickEvent( ClickEvent.Action.RUN_COMMAND, "/s " + server.getName() ) );
                     serverList.addExtra( serverTextComponent );
                     first = false;
                 }
