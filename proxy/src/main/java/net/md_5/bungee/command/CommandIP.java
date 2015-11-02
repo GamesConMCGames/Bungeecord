@@ -10,7 +10,7 @@ public class CommandIP extends PlayerCommand
 
     public CommandIP()
     {
-        super( "ip", "bungeecord.command.ip" );
+        super( "seen", "command.ip" );
     }
 
     @Override
@@ -18,16 +18,16 @@ public class CommandIP extends PlayerCommand
     {
         if ( args.length < 1 )
         {
-            sender.sendMessage( ChatColor.RED + "Please follow this command by a user name" );
+            sender.sendMessage( ChatColor.BLUE + "Please follow this command by a user name" );
             return;
         }
         ProxiedPlayer user = ProxyServer.getInstance().getPlayer( args[0] );
         if ( user == null )
         {
-            sender.sendMessage( ChatColor.RED + "That user is not online" );
+            sender.sendMessage( ChatColor.GREEN + "That user is not online" );
         } else
         {
-            sender.sendMessage( ChatColor.BLUE + "IP of " + args[0] + " is " + user.getAddress() );
+            sender.sendMessage( ChatColor.BLUE + "The internet protocol (IP) of" + args[0] + " is " + user.getAddress() );
         }
     }
 }
