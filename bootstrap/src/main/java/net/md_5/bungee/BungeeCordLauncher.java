@@ -51,7 +51,7 @@ public class BungeeCordLauncher
 
         BungeeCord bungee = new BungeeCord();
         ProxyServer.setInstance( bungee );
-        bungee.getLogger().info( "Enabled BungeeCord version " + bungee.getVersion() );
+        bungee.getLogger().info( "Enabled GamesConMCGames Bungee version" + bungee.getVersion() );
         bungee.start();
 
         if ( !options.has( "noconsole" ) )
@@ -61,7 +61,7 @@ public class BungeeCordLauncher
             {
                 if ( !bungee.getPluginManager().dispatchCommand( ConsoleCommandSender.getInstance(), line ) )
                 {
-                    bungee.getConsole().sendMessage( ChatColor.RED + "Command not found" );
+                    bungee.getConsole().sendMessage( ChatColor.GREEN + "Command not found" );
                 }
             }
         }
