@@ -11,7 +11,7 @@ public class CommandReload extends Command
 
     public CommandReload()
     {
-        super( "greload", "bungeecord.command.reload" );
+        super( "breload", "command.reload" );
     }
 
     @Override
@@ -22,7 +22,7 @@ public class CommandReload extends Command
         BungeeCord.getInstance().startListeners();
         BungeeCord.getInstance().getPluginManager().callEvent( new ProxyReloadEvent( sender ) );
 
-        sender.sendMessage( ChatColor.BOLD.toString() + ChatColor.RED.toString() + "BungeeCord has been reloaded."
-                + " This is NOT advisable and you will not be supported with any issues that arise! Please restart BungeeCord ASAP." );
+        sender.sendMessage( ChatColor.BOLD.toString() + ChatColor.RED.toString() + "It has been reloaded."
+                + " As soon as you can, please restart Bungeecord." );
     }
 }
