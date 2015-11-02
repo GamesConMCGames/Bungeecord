@@ -24,7 +24,7 @@ public class CommandPerms extends Command
         {
             permissions.addAll( ProxyServer.getInstance().getConfigurationAdapter().getPermissions( group ) );
         }
-        sender.sendMessage( ChatColor.GOLD + "You have the following groups: " + Util.csv( sender.getGroups() ) );
+        sender.sendMessage( ChatColor.GOLD + "You are assigned to this group > " + Util.csv( sender.getGroups() ) );
 
         for ( String permission : permissions )
         {
